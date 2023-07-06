@@ -1,0 +1,17 @@
+<h1>SIGN UP</h1>
+
+
+<%= form_for @user, url: signup_path do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.label :password_confirmation, t("confirmation password") %>
+    <%= f.password_field :password_confirmation %>
+    <!-- <%= f.submit t("create_my_account"), class: "btn btn-primary" %> -->
+    <br>
+    <button type="submit">SUBMIT</button>
+<% end %>
+
