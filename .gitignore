@@ -35,3 +35,10 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Vscode configuration file
+.vscode/
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
