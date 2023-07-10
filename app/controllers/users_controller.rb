@@ -1,19 +1,29 @@
 class UsersController < ApplicationController
     def show
-      @user = User.find_by id: params[:id]
-      return if @user
+      if logged_in?
+        @user = User.find_by id: params[:id]
+        return if @user
 
-      flash[:warning] = "User not found!"
-      redirect_to root_path
+        flash[:warning] = "User not found!"
+        redirect_to root_path
+      else
+        flash[:warning] = "You haven't logged in!"
+        redirect_to root_path
+      end
     end
 
     def new
-      @user = User.new
+      if logged_in? 
+        redirect_to current_user
+      else
+        @user = User.new
+      end
     end
 
     def create
       @user = User.new user_params
       if @user.save
+        log_in @user
         flash[:success] = "User created successfully"
         redirect_to @user
       else

@@ -8,9 +8,22 @@
         <li>
           <%= link_to t("help"), "#" %>
         </li>
-        <li>
-          <%= link_to t("login"), "#" %>
+        <% if logged_in? %>
+          <li><%= link_to t("users"), "#" %></li>
+          <li class="dropdown">
+            <%= link_to "#" do %>
+              <%= t "account" %>
+              <b class="caret"></b>
+            <% end %>
+            
+          <li><%= link_to t("profile"), current_user %></li>
+          <li><%= link_to t("settings"), "#" %></li>
+          <li class="divider"></li>
+          <li><%= link_to t("logout"), logout_path, method: :delete %></li>
         </li>
+        <% else %> 
+          <%= link_to t("login"), login_path %>
+        <% end %>
       </ul>
     </nav>
   </div>
