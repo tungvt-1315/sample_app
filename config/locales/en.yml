@@ -1,12 +1,25 @@
 en:
+  title_page: "Ruby on Rails Tutorials Sample App"
   hello: "Hello world"
   confirmation: "Password confirmation"
   create_my_account: "Create account"
   sign_up: "Signup"
   home: "Home"
   help: "Help"
-  login: "Log-in"
+  login: "Login"
   name: "Name"
   password: "Password"
   email: "Email"
   error: "Error"
+  invalid_email_password_combination: "Email or password is incorrect"
+  logout: "Logout"
+  settings: "Settings"
+  profile: "Profile"
+  account: "Accounts"
+  users: "Users"
+  controller:
+    users:
+      show:
+        not_found: "User not found!"
+      create:
+        success: User creat ed successfully
