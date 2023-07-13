@@ -1,9 +1,7 @@
+# frozen_string_literal: true
+
 class StaticPagesController < ApplicationController
-  def home
-    @zone = "hello i am zone"
-    @date = Date.today
-  
-  end
+  def home; end
 
   def help; end
 end

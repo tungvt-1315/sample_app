@@ -1,6 +1,8 @@
-module ApplicationHelper 
-    def full_title page_title = ""
-        base_title = "Ruby on Rails Tutorials Sample App"
-        page_title.empty? ? base_title : "#{page_title} | #{base_title}" 
-    end
+# frozen_string_literal: true
+
+module ApplicationHelper
+  def full_title page_title
+    base_title = t "title_page"
+    page_title.blank? ? base_title : "#{page_title} | #{base_title}"
+  end
 end
