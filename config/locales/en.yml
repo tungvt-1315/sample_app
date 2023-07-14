@@ -23,3 +23,4 @@ en:
         not_found: "User not found!"
       create:
         success: User creat ed successfully
+  remember_me: "Remember me on this computer!"
