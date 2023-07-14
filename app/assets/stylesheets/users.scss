@@ -1,0 +1,15 @@
+li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 2px;
+}
+
+li > a {
+  align-self: center;
+  margin-left: 5%;
+  width: 30%;
+}
+
+.page-item > a {
+  width: 100%;
+}
