@@ -17,10 +17,17 @@ en:
   profile: "Profile"
   account: "Accounts"
   users: "Users"
+  edit_user: "Edit user"
+  all_users: "All Users"
+  save_changes: "Save changes"
   controller:
     users:
       show:
         not_found: "User not found!"
       create:
-        success: User creat ed successfully
+        success: "User created successfully"
+      update:
+        success: "User updated sucessfully" 
+      login_required: "Login required"
+      wrong_user:  "You are not the owner of this account"
   remember_me: "Remember me on this computer!"

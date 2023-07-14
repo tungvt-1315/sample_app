@@ -16,7 +16,8 @@
               <b class="caret"></b>
             <% end %>
             <li><%= link_to t("profile"), current_user %></li>
-            <li><%= link_to t("settings"), "#" %></li>
+            <li><%= link_to t("settings"), edit_user_path(current_user) %></li>
+            <li><%= link_to t("all_users"), users_path %></li>
             <li class="divider"></li>
             <li><%= button_to t("logout"), logout_path, method: :delete %></li>
           </li>
