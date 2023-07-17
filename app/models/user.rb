@@ -8,6 +8,9 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: Settings.digit.length_60}
   validates :email, presence: true, length: {maximum: Settings.digit.length_60},
                     format: {with: VALID_EMAIL_REGEX}
+  validates :password, presence: true,
+                       length: {maximum: Settings.digit.length_60},
+                       allow_nil: true
 
   has_secure_password
   attr_accessor :remember_token
