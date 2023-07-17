@@ -15,6 +15,7 @@ gem "rails-i18n"
 # gem "rubocop-rails", require: false
 gem "faker", "~> 3.2"
 gem "pagy"
+gem "pry-rails"
 gem "sass-rails", ">= 6"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
@@ -40,3 +41,5 @@ group :test do
 end
 
 gem "tzinfo-data", platforms: %i(mingw mswin x64_mingw jruby)
+
+gem "figaro", "~> 1.1", ">= 1.1.1"

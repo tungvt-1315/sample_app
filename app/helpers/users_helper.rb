@@ -8,6 +8,8 @@ module UsersHelper
   end
 
   def can_destroy_user? user
+    return unless current_user
+
     current_user.admin? && !current_user?(user)
   end
 end
