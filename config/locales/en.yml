@@ -31,10 +31,15 @@ en:
       delete:
         success: "User deleted sucessfully"
         fail: "User deleted fail" 
+      activate:
+        success: "Account is activated"
+        fail: "Account is not activated"
       login_required: "Login required"
       wrong_user:  "You are not the owner of this account"
       not_admin: "You are not the administrator"
+      unactivated: "Account is unactivated"
   remember_me: "Remember me on this computer!"
   delete: "Delete"
   confirm: "You sure?"
+  check_mail: "Please check your email!"
   
