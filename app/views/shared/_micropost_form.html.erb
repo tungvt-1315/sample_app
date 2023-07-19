@@ -1,0 +1,13 @@
+<%= form_for @micropost do |f| %>
+  <%= render "shared/error_message", object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: t("compose_post") %>
+  </div>
+  <span>
+    <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
+  </span>
+  <%= f.submit t("submit"), class: "btn btn-primary" %>
+<% end %>
+
+<%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' %>
+<%= javascript_pack_tag "micropost_file_validate" %>

@@ -23,7 +23,9 @@ class UsersController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts.newest, item: 10
+  end
 
   def edit
     return if @user
@@ -67,14 +69,6 @@ class UsersController < ApplicationController
 
     flash[:warning] = t "controller.users.show.not_found"
     redirect_to root_path
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    flash[:danger] = t "controller.users.login_required"
-    store_location
-    redirect_to login_path
   end
 
   def correct_user

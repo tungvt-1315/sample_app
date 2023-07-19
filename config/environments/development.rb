@@ -41,4 +41,5 @@ Rails.application.configure do
     :port => '2525',
     :authentication => :cram_md5
   }
+  config.middleware.use I18n::JS::Middleware
 end
