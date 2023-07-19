@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   before_save :downcase_email
 
+  has_many :microposts, dependent: :destroy
+
   validates :name, presence: true, length: {maximum: Settings.digit.length_60}
   validates :email, presence: true, length: {maximum: Settings.digit.length_60},
                     format: {with: VALID_EMAIL_REGEX}
@@ -16,7 +18,6 @@ class User < ApplicationRecord
   attr_accessor :remember_token, :activation_token, :reset_token
 
   before_create :create_activation_digest
-
   class << self
     def digest string
       cost = if ActiveModel::SecurePassword.min_cost
@@ -68,6 +69,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+  def feed
+    microposts.newest
   end
   private
 

@@ -2,8 +2,8 @@ class AccountActivationsController < ApplicationController
   before_action :find_user, only: :edit
 
   def edit
-    if @user && !@user.activated? && @user.authenticated?(:activation,
-                                                          params[:id])
+    if !@user.activated? && @user.authenticated?(:activation,
+                                                 params[:id])
       @user.activate
       log_in @user
       flash[:success] = t "controller.users.activate.success"
