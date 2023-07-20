@@ -1,0 +1,9 @@
+<div class="col-md-8">
+  <h3><%= t "micropost_feed" %></h3>
+  <% if @feed_items.any? %>
+    <ol class="micropost">
+      <%= render @feed_items %>
+    </ol>
+    <%== pagy_bootstrap_nav @page %>
+  <% end %>
+</div>

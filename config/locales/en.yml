@@ -42,6 +42,14 @@ en:
       wrong_user:  "You are not the owner of this account"
       not_admin: "You are not the administrator"
       unactivated: "Account is unactivated"
+    microposts:
+      create:
+        success: "Micropost is created successfully"
+        fail: "Micropost is created fail"
+      destroy:
+        success: "Micropost deleted successfully"
+        fail: "Micopost deleted fail"
+      invalid: "Micropost is invalid"
   remember_me: "Remember me on this computer!"
   delete: "Delete"
   confirm: "You sure?"
@@ -54,4 +62,14 @@ en:
   activate: "activate"
   click_link_reset_password: "To reset your password click the link below:"
   click_link_signup: "Welcome to sample app, click link below to verify"
-  
+  microposts: "Microposts: "
+  posted: "Posted: "
+  ago: " ago"
+  view_profile: "view_profile"
+  compose_post: "Compose a new post"
+  micropost_feed: "Micropost Feed"
+  delete: "delete"
+  image_format_require: "Must be a valid image format"
+  size_limit: "should be less than 5MB"
+  signup_now: "Signup now"
+  maximum_file_size: "Maximum file size id 5MB, please choose a smaller file"
