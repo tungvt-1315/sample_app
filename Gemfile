@@ -5,7 +5,7 @@ ruby "3.0.2"
 
 gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.4", require: false
-gem "bootstrap", "~> 5.0"
+gem "bootstrap"
 gem "config", "~> 4.2", ">= 4.2.1"
 gem "i18n-js"
 gem "jbuilder", "~> 2.7"
