@@ -3,6 +3,7 @@ class Micropost < ApplicationRecord
   has_one_attached :image
 
   scope :newest, ->{order created_at: :desc}
+  scope :relate_post, ->(user_ids){where user_id: user_ids}
   # scope :recent_post, ->{order created_at :desc}
 
   # default_scope { order created_at: :desc }

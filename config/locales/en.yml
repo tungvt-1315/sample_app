@@ -50,6 +50,8 @@ en:
         success: "Micropost deleted successfully"
         fail: "Micopost deleted fail"
       invalid: "Micropost is invalid"
+    relationships:
+      not_found: "Relationship not found"
   remember_me: "Remember me on this computer!"
   delete: "Delete"
   confirm: "You sure?"
@@ -65,7 +67,7 @@ en:
   microposts: "Microposts: "
   posted: "Posted: "
   ago: " ago"
-  view_profile: "view_profile"
+  view_profile: "view profile"
   compose_post: "Compose a new post"
   micropost_feed: "Micropost Feed"
   delete: "delete"
@@ -73,3 +75,8 @@ en:
   size_limit: "should be less than 5MB"
   signup_now: "Signup now"
   maximum_file_size: "Maximum file size id 5MB, please choose a smaller file"
+  following: "Following"
+  followers: "Followers"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  
